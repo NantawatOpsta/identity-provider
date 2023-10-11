@@ -9,7 +9,7 @@ export default withAuth(function middleware(req) {}, {
                 return true;
             }
 
-            if (req.nextUrl.pathname.startsWith("/auth") && token === null) {
+            if (req.nextUrl.pathname.startsWith("/auth")) {
                 if (token == null) {
                     return false;
                 }
