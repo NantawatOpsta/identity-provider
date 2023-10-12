@@ -29,7 +29,7 @@ export default async function RootLayout({ children }) {
                             <MenuLink title="Service A" link="/auth/service-a" />
                             <MenuLink title="Service B" link="/auth/service-b" />
                             {session && 
-                                <Logout />
+                                <Logout keycloak={process.env.KEYCLOAK_ISSUER} />
                             }
                         </div>
                         <div className="flex-1 py-6 px-10 bg-gray-50 leading-7">{children}</div>
