@@ -3,7 +3,7 @@ import useSWR from "swr";
 import { useSession } from "next-auth/react";
 
 
-export default function ServiceB() {
+export default function ServiceA() {
     const { data: session } = useSession();
     const token = session.accessToken;
 
